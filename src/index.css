@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-search-bar {
+    @apply w-full p-2 border rounded mb-4
+    bg-white dark:bg-gray-800
+    text-gray-900 dark:text-white
+    border-gray-300 dark:border-gray-700
+    placeholder-gray-500 dark:placeholder-gray-400
+    focus:ring-blue-500 dark:focus:ring-blue-400
+    focus:border-blue-500 dark:focus:border-blue-400
+    transition-colors duration-200;
+  }
+
+  .form-input {
+    @apply w-full p-2 border rounded
+      bg-white dark:bg-gray-800
+      text-gray-900 dark:text-white
+      border-gray-300 dark:border-gray-700
+      placeholder-gray-500 dark:placeholder-gray-400
+      focus:ring-blue-500 dark:focus:ring-blue-400
+      focus:border-blue-500 dark:focus:border-blue-400
+      transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-500 text-white rounded 
+      hover:bg-blue-600 dark:bg-blue-600 
+      dark:hover:bg-blue-700 transition-colors duration-200;
+  }
+}
+
+:root {
+  --background: white;
+  --text: black;
+}
+
+[data-theme='dark'] {
+  --background: #1a1a1a;
+  --text: white;
+}
+
+body {
+  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-200;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
